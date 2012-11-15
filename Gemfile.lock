@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/thoughtbot/factory_girl_rails.git
+  revision: 402e6ed84ca50f3fff26f198b0a99f60b028594c
+  specs:
+    factory_girl_rails (4.1.0)
+      factory_girl (~> 4.1.0)
+      railties (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,6 +62,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.1.0)
+      activesupport (>= 3.0.0)
     ffi (1.1.5)
     hike (1.2.1)
     i18n (0.6.1)
@@ -152,6 +162,7 @@ DEPENDENCIES
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)
   execjs
+  factory_girl_rails!
   jquery-rails
   pg (= 0.12.2)
   rails (= 3.2.8)
