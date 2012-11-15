@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe "UserPages" do
   subject { page }
+
   describe "signup page" do
     before { visit signup_path }
 
@@ -37,6 +38,16 @@ describe "UserPages" do
       it "should create a user" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
+
+      describe "after saving the user" do
+        before { click_button submit }
+        let(:user) { User.find_by_email('ljm@gmail.com') }
+
+        it { should have_selector('title', text: user.name) }
+        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+        it { should have_link('Sign out') }
+      end
     end
+
   end
 end
